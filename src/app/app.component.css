@@ -1,0 +1,399 @@
+.sidenav-container {
+
+
+
+    height: 100vh;
+  
+   }
+  
+   .main-container {
+  
+    width: 100%;
+  
+    overflow: hidden !important;
+  
+   }
+  
+   mat-toolbar {
+  
+    background-color: white;
+  
+    padding: 0;
+  
+   }
+  
+   /* mat-nav-list.list-horizontal.mat-list-item {
+  
+    display: inline-block;
+  
+    height: auto;
+  
+    width: auto;
+  
+    align-items: left;
+  
+   } */
+  
+   mat-nav-list {
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    width: 100% !important;
+  
+   }
+  
+   .program-button {
+  
+    background-color: white;
+  
+    border: 2px solid #7dd6ff;
+  
+   }
+  
+   .mba-button {
+  
+    background-color: white;
+  
+    border: 2px solid #7dd6ff;
+  
+   }
+  
+   .mat-list-item {
+  
+    display: inline-block;
+  
+    height: auto;
+  
+    width: auto;
+  
+    align-items: left;
+  
+   }
+  
+   .detail-paragraph {
+  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+   }
+  
+   /* .custom-select {
+  
+    background-color: #ffffff;
+  
+    border: 1px solid #050e0d;
+  
+    padding: 5px;
+  
+   } */
+  
+   .symbol {
+  
+    font-size: large;
+  
+   }
+  
+   .card-container {
+  
+    display: flex;
+  
+    /* justify-content: space-between; */
+  
+    /* Adjust spacing */
+  
+    /* overflow: hidden; */
+  
+    /* Prevent overflow */
+  
+   }
+  
+   .card {
+  
+    flex: 10 0 10%;
+  
+    /* Fixed width for five cards in a row */
+  
+    margin: 0 10px;
+  
+    /* Space between cards */
+  
+    background-color: white;
+  
+    transition: box-shadow 0.3s;
+  
+    margin: 10px;
+  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+   }
+  
+   .all-card {
+  
+    margin: 0 10px;
+  
+    /* Space between cards */
+  
+    background-color: white;
+  
+    transition: box-shadow 0.3s;
+  
+    margin: 10px;
+  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+   }
+  
+   .card:hover {
+  
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  
+   }
+  
+   .all-card:hover {
+  
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  
+   }
+  
+   .peo-title {
+  
+    font-size: small;
+  
+   }
+  
+   .spacer {
+  
+    flex-grow: 1;
+  
+   }
+  
+   .description-icon {
+  
+    color: #9bd6f2;
+  
+    transform: rotate(180deg);
+  
+    display: inline-block;
+  
+   }
+  
+   .card-content {
+  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+   }
+  
+   .containerone {
+  
+    display: flex;
+  
+   }
+  
+   /* Progress bar styling */
+  
+   .progress-bar-container {
+  
+    width: 100%;
+  
+    /* Adds space between the title and the progress bar */
+  
+   }
+  
+   /* Custom green color for the progress bar */
+  
+   ::ng-deep .green-progress .mat-progress-bar-fill {
+  
+    background-color: #4caf50 !important;
+  
+    /* Material green 500 */
+  
+   }
+  
+   .lightWeight {
+  
+    font-weight: 100 !important;
+  
+   }
+  
+   .header-content {
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    width: 100%;
+  
+   }
+  
+   .title-row {
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    padding-bottom: 8px;
+  
+    /* Space between title/description and the progress bar */
+  
+   }
+  
+   .progress-bar-row {
+  
+    width: 80%;
+  
+    margin-top: 8px;
+  
+    display: flex;
+  
+    flex-direction: row;
+  
+   }
+  
+   mat-panel-title,
+  
+   mat-panel-description {
+  
+    font-size: 16px;
+  
+   }
+  
+   mat-panel-description {
+  
+    font-size: 14px;
+  
+    /* Smaller font size for the second line of text */
+  
+    color: rgba(0, 0, 0, 0.6);
+  
+    /* Optional: lighter color for subtitle */
+  
+   }
+  
+   mat-expansion-panel-header {
+  
+    min-height: auto !important;
+  
+    /* Remove any fixed height */
+  
+    height: auto;
+  
+    /* Allow height to adjust based on content */
+  
+   }
+  
+   .btn-blue {
+  
+    background-color: darkcyan !important;
+  
+    color: white
+  
+   }
+  
+   .left-items {
+  
+    display: flex;
+  
+    align-items: center;
+  
+   }
+  
+   .right-items {
+  
+    display: flex;
+  
+    align-items: center;
+  
+   }
+  
+   .spacer {
+  
+    flex: 1 1 auto;
+  
+    /* This creates space between left and right items */
+  
+   }
+  
+   .rounded-select {
+  
+    border-radius: 7px;
+  
+    /* Makes the select box rounded */
+  
+    padding: 3px 8px;
+  
+    font-size: 16px;
+  
+    /* Adjust the padding to improve appearance */
+  
+   }
+  
+   .user-avatar {
+  
+    width: 40px;
+  
+    height: 40px;
+  
+    border-radius: 50%;
+  
+    /* Circular image */
+  
+   }
+  
+   .user-details {
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    /* align-items: flex-start; */
+  
+    /* padding: 0%; */
+  
+   }
+  
+   .user-name {
+  
+    font-size: 12px;
+  
+    padding: 0 !important;
+  
+    margin: 0 !important;
+  
+    margin-bottom: 0;
+  
+    /* padding: 0%; */
+  
+   }
+  
+   .user-info {
+  
+    display: flex;
+  
+    align-items: center;
+  
+   }
+  
+   .search-input::placeholder {
+  
+    font-family: 'FontAwesome';
+  
+    content: "\f002";
+  
+    /* Unicode for Font Awesome search icon */
+  
+   }
+  
+   .name {
+  
+    font-weight: bold;
+  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+   }
+  
+   .user-name {
+  
+    font-weight: bold;
+  
+   }

@@ -1,0 +1,272 @@
+<div class="main-container">
+  <mat-toolbar>
+   <div class="left-items">
+    <button mat-icon-button class="example-icon ml-3" aria-label="Example icon-button with menu icon"
+     (click)="toggleSidebar()">
+     <mat-icon>menu</mat-icon>
+ 
+    </button>
+ 
+    <img class="ml-5" src="/../assets/images/image.png">
+ 
+    <select class="form-select rounded-select ml-5" aria-label="Default select example">
+ 
+     <option value="Chennai" selected>Chennai</option>
+ 
+     <option value="Bangalore">Bangalore</option>
+ 
+     <option value="Hyderabad">Hyderabad</option>
+ 
+     <option value="Delhi">Delhi</option>
+ 
+    </select>
+ 
+   </div>
+ 
+   <span class="spacer"></span>
+ 
+   <div class="left-items">
+ 
+    <div class="search-hero">
+ 
+     <input class="form-control mr-5" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
+ 
+      placeholder="Search">
+ 
+    </div>
+ 
+    <div class="user-info mr-4">
+ 
+     <div class="user-details ">
+ 
+      <span class="name">Geroge Willam</span>
+ 
+      <span class="user-name">Super Admin</span>
+ 
+     </div>
+ 
+     <img src="/../assets/images/image.jpg" alt="User Avatar" class="user-avatar">
+ 
+    </div>
+ 
+   </div>
+ 
+  </mat-toolbar>
+ 
+  <mat-sidenav-container class="sidenav-container">
+ 
+   <!-- Sidebar -->
+ 
+   <mat-sidenav #sidenav mode="over" [(opened)]="isSidenavOpen">
+ 
+    <mat-nav-list>
+ 
+     <a mat-list-item href="#">Dashboard</a>
+ 
+     <a mat-list-item href="#">Programs</a>
+ 
+    </mat-nav-list>
+ 
+   </mat-sidenav>
+ 
+   <!-- Main content area -->
+ 
+   <mat-sidenav-content>
+ 
+    <div class="content">
+ 
+     <!-- Your main content goes here -->
+ 
+     <mat-toolbar>
+ 
+      <div class="left-items">
+ 
+       <button mat-button class="program-button ml-3"><span class="symbol">&lt;</span>&nbsp; Programs</button>
+ 
+       <button mat-button class="mba-button ml-3"><span class="symbol">&lt;</span>&nbsp; Master in Business
+ 
+        Administration - MBA</button>
+ 
+       <h4 class="detail-paragraph ml-3">Detailed Overview</h4>
+ 
+      </div>
+ 
+      <span class="spacer"></span>
+ 
+      <div class="left-items">
+ 
+       <mat-icon class="mr-3">groups</mat-icon>
+ 
+       <select class="form-select rounded-select mr-2" aria-label="Default select example">
+ 
+        <option value="2023" selected>2023</option>
+ 
+        <option value="2024">2024</option>
+ 
+       </select>
+ 
+      </div>
+ 
+     </mat-toolbar>
+ 
+     <div class="card-container">
+ 
+      <mat-card class="all-card">
+ 
+       <mat-card-content style="display: flex; text-align: center; ">
+ 
+        <h3>All</h3>
+ 
+       </mat-card-content>
+ 
+      </mat-card>
+ 
+      <mat-card class="card" *ngFor="let card of cards">
+ 
+       <mat-card-header>
+ 
+        <mat-card-title class="peo-title">{{ card.title }}</mat-card-title>
+ 
+        <span class="spacer"></span>
+ 
+        <mat-icon class="description-icon">description</mat-icon>
+ 
+       </mat-card-header>
+ 
+       <mat-card-content class="card-content ">
+ 
+        <p>{{ card.content }}</p>
+ 
+       </mat-card-content>
+ 
+      </mat-card>
+ 
+     </div>
+ 
+    </div>
+ 
+    <div class="containerone">
+ 
+     <div class="sidepanel col-4">
+ 
+      <mat-card>Program Outcomes</mat-card>
+ 
+      <mat-accordion *ngFor="let x of details; let i=index">
+
+        <mat-expansion-panel [expanded]="step === i" (opened)="setStep(i)">
+ 
+        <mat-expansion-panel-header>
+ 
+         <div class="header-content">
+ 
+          <div class="title-row mt-2">
+ 
+           <mat-panel-title>
+ 
+            <button type="button" class="btn btn-blue btn-sm">{{x.value}}</button>
+ 
+            <span class="lightWeight ml-2"> Evalution : </span><span> 5 out of 12</span>
+ 
+           </mat-panel-title>
+ 
+           <mat-panel-description>
+ 
+            <h6 class="font-weight-bold">{{x.label}}</h6>
+ 
+           </mat-panel-description>
+ 
+           <div class="progress-bar-row ">
+ 
+            <mat-progress-bar class="green-progress" mode="determinate" value="80">80%
+ 
+            </mat-progress-bar>
+ 
+           </div>
+ 
+          </div>
+ 
+         </div>
+ 
+        </mat-expansion-panel-header>
+ 
+        <div>
+ 
+         <!-- Content of the expansion panel goes here -->
+ 
+         <p class="text-warning font-weight-bold mt-2">Description</p>
+ 
+         Application of tools & techniques relevant to management theories and practices in analyzing & solving
+ 
+         business
+ 
+         issues <br><br>
+ 
+         <span class="font-weight-bold">PEOs Mapped</span><br>
+ 
+         <span class="font-weight-normal">PEO 5</span>
+ 
+        </div>
+ 
+       </mat-expansion-panel>
+ 
+      </mat-accordion>
+ 
+     </div>
+ 
+     <div class="containertwo col-8">
+ 
+      <div class="row">
+ 
+       <mat-toolbar class="col-12 m-0 p-0 ">
+ 
+        <div class="left-items">
+ 
+         <button mat-button class="program-button ml-3"><span class="symbol">&lt;</span>&nbsp;
+ 
+          Programs</button>
+ 
+        </div>
+ 
+        <span class="spacer"></span>
+ 
+        <div class="left-items">
+ 
+         <a href="#" class="peo-title">OBE Evalution Report</a>
+ 
+        </div>
+ 
+       </mat-toolbar>
+ 
+      </div>
+ 
+      <div class="row">
+ 
+       <div class="mainpanel col-3 m-0 p-0 " style="background-color: white;">
+ 
+        <app-course-details></app-course-details>
+ 
+       </div>
+ 
+       <div class="assessmentPanel col-9" style="background-color: white;">
+ 
+        <div class="row">
+ 
+         <app-assessment-details class="col-12"></app-assessment-details>
+ 
+         <app-line-graph class="col-12"></app-line-graph>
+ 
+        </div>
+ 
+       </div>
+ 
+      </div>
+ 
+     </div>
+ 
+    </div>
+ 
+   </mat-sidenav-content>
+ 
+  </mat-sidenav-container>
+ 
+ </div>
